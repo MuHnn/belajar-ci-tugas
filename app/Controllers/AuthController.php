@@ -37,6 +37,12 @@ class AuthController extends BaseController
                             'role' => $dataUser['role'],
                             'isLoggedIn' => TRUE
                         ]);
+                        $today = date('Y-m-d');
+                        $diskon = (new \App\Models\DiskonModel())->where('tanggal', $today)->first();
+
+                        if ($diskon) {
+                        session()->set('diskon', $diskon['nominal']);
+                        }                       
 
                         return redirect()->to(base_url('/'));
                     } else {

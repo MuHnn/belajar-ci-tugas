@@ -8,13 +8,23 @@
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
-
-    <div class="search-bar">
+<div class="d-flex align-items-center">
+    <!-- Search Bar -->
+    <div class="search-bar me-3">
         <form class="search-form d-flex align-items-center" method="POST" action="#">
             <input type="text" name="query" placeholder="Search" title="Enter search keyword">
             <button type="submit" title="Search"><i class="bi bi-search"></i></button>
         </form>
     </div><!-- End Search Bar -->
+
+    <!-- Diskon Info -->
+    <?php if (session()->get('diskon')): ?>
+        <div class="alert alert-success py-1 px-3 mb-0" style="font-size: 14px;">
+            🎉 Diskon Hari Ini: <strong>Rp <?= number_format(session()->get('diskon')) ?></strong>
+        </div>
+    <?php endif; ?>
+</div>
+
 
     <nav class="header-nav ms-auto">
         <ul class="d-flex align-items-center">

@@ -89,3 +89,35 @@ Proyek menggunakan struktur MVC CodeIgniter 4:
 - public/NiceAdmin - Template admin
 
 //test
+
+Produk & Kategori
+-Manajemen produk (tambah, ubah, hapus).
+-Kategori produk dengan ikon (kategori disimpan di database).
+
+Diskon Harian
+-Admin dapat menambahkan diskon berdasarkan tanggal.
+-Diskon otomatis diterapkan ke harga produk:
+Saat ditambahkan ke keranjang.
+Saat disimpan sebagai transaksi.
+
+Keranjang Belanja
+-Menggunakan library Cart CodeIgniter 4.
+-Menampilkan produk di keranjang lengkap dengan harga setelah diskon.
+-Dapat mengedit jumlah item, hapus item, atau kosongkan keranjang.
+
+Transaksi
+-Proses checkout menyimpan data transaksi dan detail transaksi.
+-Menghitung total harga, diskon, dan ongkir.
+-Menggunakan API RajaOngkir (Kommerce) untuk mencari lokasi dan ongkir.
+-Menyimpan status transaksi (0 = Belum Selesai, 1 = Sudah Selesai).
+
+Dashboard
+-Aplikasi dashboard terpisah di folder public/dashboard-toko.
+-Mengakses data transaksi melalui Web Service (/api).
+-Menampilkan:
+Username
+Alamat
+Total harga (dengan jumlah item di bawahnya)
+Ongkir
+Status transaksi dalam bentuk teks
+Tanggal transaksi
